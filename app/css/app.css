@@ -4840,8 +4840,10 @@ textarea {
   font-size: 1.11111rem; }
 
 .siteTitle {
-  text-align: center;
-  font-size: 1.9rem; }
+  text-align: center; }
+  @media only screen and (min-width:40.063em) {
+    .siteTitle {
+      font-size: 1.9rem; } }
 
 .noteTitle {
   margin-left: -25px; }

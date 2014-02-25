@@ -6,7 +6,9 @@
 
 .siteTitle {
    text-align: center;
-   font-size: 1.9rem;
+   @media #{$medium-up} {
+      font-size: 1.9rem;
+   }
 }
 
 .noteTitle {
