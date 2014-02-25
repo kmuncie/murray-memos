@@ -43,11 +43,11 @@ var app = (function() {
 
 	// Human readable timestamp
 	function formatTimeOfDay(millisSinceEpoch) {
-		var secondsSinceEpoch = (millisSinceEpoch / 1000) || 0;
+		var secondsSinceEpoch = (millisSinceEpoch / 1000) | 0;
 		var secondsInDay = ((secondsSinceEpoch % 86400) + 86400) % 86400;
 		var seconds = secondsInDay % 60;
-		var minutes = ((secondsInDay / 60) || 0) % 60;
-		var hours = (secondsInDay / 3600) || 0;
+		var minutes = ((secondsInDay / 60) | 0) % 60;
+		var hours = (secondsInDay / 3600) | 0;
 		return hours + (minutes < 10 ? ':0' : ':') + minutes + (seconds < 10 ? ':0' : ':') + seconds;
 	}
 
